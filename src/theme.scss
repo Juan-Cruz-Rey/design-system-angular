@@ -1,0 +1,18 @@
+// Custom Theming for Angular Material
+@use '@angular/material' as mat;
+
+// Include the common styles for Angular Material
+@include mat.core();
+
+// Define the theme
+$design-system-theme: mat.define-theme();
+
+// Apply the theme to all Angular Material components
+html {
+  @include mat.all-component-themes($design-system-theme);
+}
+
+// Set typography
+html {
+  @include mat.typography-hierarchy($design-system-theme);
+}
