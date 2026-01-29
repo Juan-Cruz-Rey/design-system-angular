@@ -1,0 +1,348 @@
+// ============================================================================
+// COLOR TOKENS - COTO Design System
+// ============================================================================
+
+@use 'sass:map';
+
+// ============================================================================
+// LIGHT THEME TOKENS
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// Primary (Red) - Esquema Light
+// ----------------------------------------------------------------------------
+$light-primary: #c41113 !default; // P-40
+$light-on-primary: #fff !default; // P-100
+$light-primary-container: #ffdad6 !default; // P-90
+$light-on-primary-container: #410002 !default; // P-10
+$light-primary-fixed: #ffdad6 !default; // P-90
+$light-primary-fixed-dim: #ffb4ab !default; // P-80
+$light-on-primary-fixed: #410002 !default; // P-10
+$light-on-primary-fixed-variant: #93000a !default; // P-30
+
+// ----------------------------------------------------------------------------
+// Secondary (Cyan) - Esquema Light
+// ----------------------------------------------------------------------------
+$light-secondary: #006494 !default; // S-40
+$light-on-secondary: #fff !default; // S-100
+$light-secondary-container: #cbe6ff !default; // S-90
+$light-on-secondary-container: #001d32 !default; // S-10
+$light-secondary-fixed: #cbe6ff !default; // S-90
+$light-secondary-fixed-dim: #8fcdff !default; // S-80
+$light-on-secondary-fixed: #001e30 !default; // S-10
+$light-on-secondary-fixed-variant: #004b71 !default; // S-30
+
+// ----------------------------------------------------------------------------
+// Tertiary (Violet) - Esquema Light
+// ----------------------------------------------------------------------------
+$light-tertiary: #7436d1 !default; // T-40
+$light-on-tertiary: #fff !default; // T-100
+$light-tertiary-container: #ecdcff !default; // T-90
+$light-on-tertiary-container: #5d11b9 !default; // T-30
+$light-tertiary-fixed: #ecdcff !default; // T-90
+$light-tertiary-fixed-dim: #d5bbff !default; // T-80
+$light-on-tertiary-fixed: #270058 !default; // T-10
+$light-on-tertiary-fixed-variant: #5d11b9 !default; // T-30
+
+// ----------------------------------------------------------------------------
+// Error - Esquema Light
+// ----------------------------------------------------------------------------
+$light-error: #ba1a1a !default; // E-40
+$light-on-error: #fff !default; // E-100
+$light-error-container: #ffdcd1 !default; // E-90
+$light-on-error-container: #862200 !default; // E-30
+
+// ----------------------------------------------------------------------------
+// Surface & Background - Esquema Light
+// ----------------------------------------------------------------------------
+$light-surface-dim: #d1dbe4 !default; // N-87
+$light-surface: #fafcfe !default; // N-99
+$light-surface-bright: #fafcfe !default; // N-99
+$light-surface-variant: #e6e6e6 !default; // NV-95
+$light-inverse-surface: #2a3137 !default; // N-20
+
+$light-surface-container-lowest: #fff !default; // N-100
+$light-surface-container-low: #eef4f9 !default; // N-96
+$light-surface-container: #e7eff6 !default; // N-94
+$light-surface-container-high: #e1e9f0 !default; // N-92
+$light-surface-container-highest: #dce3eb !default; // N-90
+
+$light-on-surface: #191d20 !default; // N-10
+$light-on-surface-variant: #474747 !default; // NV-30
+$light-inverse-on-surface: #ecf1f7 !default; // N-95
+$light-outline: #797979 !default; // NV-50
+$light-outline-variant: #c9c9c9 !default; // NV-80
+
+// ----------------------------------------------------------------------------
+// Inverse Primary - Esquema Light
+// ----------------------------------------------------------------------------
+$light-inverse-primary: #ffb4ab !default; // P-80
+
+// ----------------------------------------------------------------------------
+// Scrim & Shadow - Esquema Light
+// ----------------------------------------------------------------------------
+$light-scrim: #000 !default; // N-0
+$light-shadow: #000 !default; // N-0
+
+// ----------------------------------------------------------------------------
+// Additional Colors - Esquema Light
+// ----------------------------------------------------------------------------
+$light-link: #3d4cd9 !default; // L-40
+$light-on-link: #fff !default; // L-100
+$light-link-container: #dfe0ff !default; // L-90
+$light-on-link-container: #202fc2 !default; // L-30
+
+$light-warning: #755b00 !default; // W-40
+$light-on-warning: #fff !default; // W-100
+$light-warning-container: #ffdf92 !default; // W-90
+$light-on-warning-container: #594400 !default; // W-30
+
+$light-success: #2e6c00 !default; // S-40
+$light-on-success: #fff !default; // S-100
+$light-success-container: #a0f969 !default; // S-90
+$light-on-success-container: #215100 !default; // S-30
+
+// ============================================================================
+// DARK THEME TOKENS
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// Primary (Red) - Esquema Dark
+// ----------------------------------------------------------------------------
+$dark-primary: #ffb4ab !default; // P-80
+$dark-on-primary: #690005 !default; // P-20
+$dark-primary-container: #93000a !default; // P-30
+$dark-on-primary-container: #ffdad6 !default; // P-90
+$dark-primary-fixed: #ffdad6 !default; // P-90
+$dark-primary-fixed-dim: #ffb4ab !default; // P-80
+$dark-on-primary-fixed: #410002 !default; // P-10
+$dark-on-primary-fixed-variant: #93000a !default; // P-30
+
+// ----------------------------------------------------------------------------
+// Secondary (Cyan) - Esquema Dark
+// ----------------------------------------------------------------------------
+$dark-secondary: #8fcdff !default; // S-80
+$dark-on-secondary: #00344f !default; // S-20
+$dark-secondary-container: #004b71 !default; // S-30
+$dark-on-secondary-container: #cbe6ff !default; // S-90
+$dark-secondary-fixed: #cbe6ff !default; // S-90
+$dark-secondary-fixed-dim: #8fcdff !default; // S-80
+$dark-on-secondary-fixed: #001e30 !default; // S-10
+$dark-on-secondary-fixed-variant: #004b71 !default; // S-30
+
+// ----------------------------------------------------------------------------
+// Tertiary (Violet) - Esquema Dark
+// ----------------------------------------------------------------------------
+$dark-tertiary: #d5bbff !default; // T-80
+$dark-on-tertiary: #41008b !default; // T-20
+$dark-tertiary-container: #5d11b9 !default; // T-30
+$dark-on-tertiary-container: #ecdcff !default; // T-90
+$dark-tertiary-fixed: #ecdcff !default; // T-90
+$dark-tertiary-fixed-dim: #d5bbff !default; // T-80
+$dark-on-tertiary-fixed: #270058 !default; // T-10
+$dark-on-tertiary-fixed-variant: #5d11b9 !default; // T-30
+
+// ----------------------------------------------------------------------------
+// Error - Esquema Dark
+// ----------------------------------------------------------------------------
+$dark-error: #ffb5a0 !default; // E-80
+$dark-on-error: #5f1500 !default; // E-20
+$dark-error-container: #862200 !default; // E-30
+$dark-on-error-container: #ffdcd1 !default; // E-90
+
+// ----------------------------------------------------------------------------
+// Surface & Background - Esquema Dark
+// ----------------------------------------------------------------------------
+$dark-surface-dim: #121315 !default; // N-6
+$dark-surface: #121315 !default; // N-6
+$dark-surface-bright: #32393f !default; // N-24
+$dark-surface-variant: #3b3b3b !default; // NV-25
+$dark-inverse-surface: #dce3eb !default; // N-90
+
+$dark-surface-container-lowest: #0e0e0e !default; // N-4
+$dark-surface-container-low: #191d20 !default; // N-10
+$dark-surface-container: #1c2023 !default; // N-12
+$dark-surface-container-high: #262b2f !default; // N-17
+$dark-surface-container-highest: #2f363c !default; // N-22
+
+$dark-on-surface: #dce3eb !default; // N-90
+$dark-on-surface-variant: #c9c9c9 !default; // NV-80
+$dark-inverse-on-surface: #2a3137 !default; // N-20
+$dark-outline: #939393 !default; // NV-60
+$dark-outline-variant: #474747 !default; // NV-30
+
+// ----------------------------------------------------------------------------
+// Inverse Primary - Esquema Dark
+// ----------------------------------------------------------------------------
+$dark-inverse-primary: #c41113 !default; // P-40
+
+// ----------------------------------------------------------------------------
+// Scrim & Shadow - Esquema Dark
+// ----------------------------------------------------------------------------
+$dark-scrim: #000 !default; // N-0
+$dark-shadow: #000 !default; // N-0
+
+// ----------------------------------------------------------------------------
+// Additional Colors - Esquema Dark
+// ----------------------------------------------------------------------------
+$dark-link: #bdc2ff !default; // L-80
+$dark-on-link: #0012a1 !default; // L-20
+$dark-link-container: #202fc2 !default; // L-30
+$dark-on-link-container: #dfe0ff !default; // L-90
+
+$dark-warning: #f4bf00 !default; // W-80
+$dark-on-warning: #3e2e00 !default; // W-20
+$dark-warning-container: #594400 !default; // W-30
+$dark-on-warning-container: #ffdf92 !default; // W-90
+
+$dark-success: #85dc50 !default; // S-80
+$dark-on-success: #153800 !default; // S-20
+$dark-success-container: #215100 !default; // S-30
+$dark-on-success-container: #a0f969 !default; // S-90
+
+// ============================================================================
+// TOKEN MAPS (para facilitar el uso)
+// ============================================================================
+
+$light-theme-tokens: (
+  // Primary
+  'primary': $light-primary,
+  'on-primary': $light-on-primary,
+  'primary-container': $light-primary-container,
+  'on-primary-container': $light-on-primary-container,
+  'primary-fixed': $light-primary-fixed,
+  'primary-fixed-dim': $light-primary-fixed-dim,
+  'on-primary-fixed': $light-on-primary-fixed,
+  'on-primary-fixed-variant': $light-on-primary-fixed-variant,
+  'inverse-primary': $light-inverse-primary,
+
+  // Secondary
+  'secondary': $light-secondary,
+  'on-secondary': $light-on-secondary,
+  'secondary-container': $light-secondary-container,
+  'on-secondary-container': $light-on-secondary-container,
+  'secondary-fixed': $light-secondary-fixed,
+  'secondary-fixed-dim': $light-secondary-fixed-dim,
+  'on-secondary-fixed': $light-on-secondary-fixed,
+  'on-secondary-fixed-variant': $light-on-secondary-fixed-variant,
+
+  // Tertiary
+  'tertiary': $light-tertiary,
+  'on-tertiary': $light-on-tertiary,
+  'tertiary-container': $light-tertiary-container,
+  'on-tertiary-container': $light-on-tertiary-container,
+  'tertiary-fixed': $light-tertiary-fixed,
+  'tertiary-fixed-dim': $light-tertiary-fixed-dim,
+  'on-tertiary-fixed': $light-on-tertiary-fixed,
+  'on-tertiary-fixed-variant': $light-on-tertiary-fixed-variant,
+
+  // Error
+  'error': $light-error,
+  'on-error': $light-on-error,
+  'error-container': $light-error-container,
+  'on-error-container': $light-on-error-container,
+
+  // Surface
+  'surface-dim': $light-surface-dim,
+  'surface': $light-surface,
+  'surface-bright': $light-surface-bright,
+  'surface-variant': $light-surface-variant,
+  'surface-container-lowest': $light-surface-container-lowest,
+  'surface-container-low': $light-surface-container-low,
+  'surface-container': $light-surface-container,
+  'surface-container-high': $light-surface-container-high,
+  'surface-container-highest': $light-surface-container-highest,
+  'on-surface': $light-on-surface,
+  'on-surface-variant': $light-on-surface-variant,
+  'inverse-surface': $light-inverse-surface,
+  'inverse-on-surface': $light-inverse-on-surface,
+  'outline': $light-outline,
+  'outline-variant': $light-outline-variant,
+  'scrim': $light-scrim,
+  'shadow': $light-shadow,
+
+  // Additional
+  'link': $light-link,
+  'on-link': $light-on-link,
+  'link-container': $light-link-container,
+  'on-link-container': $light-on-link-container,
+  'warning': $light-warning,
+  'on-warning': $light-on-warning,
+  'warning-container': $light-warning-container,
+  'on-warning-container': $light-on-warning-container,
+  'success': $light-success,
+  'on-success': $light-on-success,
+  'success-container': $light-success-container,
+  'on-success-container': $light-on-success-container
+);
+$dark-theme-tokens: (
+  // Primary
+  'primary': $dark-primary,
+  'on-primary': $dark-on-primary,
+  'primary-container': $dark-primary-container,
+  'on-primary-container': $dark-on-primary-container,
+  'primary-fixed': $dark-primary-fixed,
+  'primary-fixed-dim': $dark-primary-fixed-dim,
+  'on-primary-fixed': $dark-on-primary-fixed,
+  'on-primary-fixed-variant': $dark-on-primary-fixed-variant,
+  'inverse-primary': $dark-inverse-primary,
+
+  // Secondary
+  'secondary': $dark-secondary,
+  'on-secondary': $dark-on-secondary,
+  'secondary-container': $dark-secondary-container,
+  'on-secondary-container': $dark-on-secondary-container,
+  'secondary-fixed': $dark-secondary-fixed,
+  'secondary-fixed-dim': $dark-secondary-fixed-dim,
+  'on-secondary-fixed': $dark-on-secondary-fixed,
+  'on-secondary-fixed-variant': $dark-on-secondary-fixed-variant,
+
+  // Tertiary
+  'tertiary': $dark-tertiary,
+  'on-tertiary': $dark-on-tertiary,
+  'tertiary-container': $dark-tertiary-container,
+  'on-tertiary-container': $dark-on-tertiary-container,
+  'tertiary-fixed': $dark-tertiary-fixed,
+  'tertiary-fixed-dim': $dark-tertiary-fixed-dim,
+  'on-tertiary-fixed': $dark-on-tertiary-fixed,
+  'on-tertiary-fixed-variant': $dark-on-tertiary-fixed-variant,
+
+  // Error
+  'error': $dark-error,
+  'on-error': $dark-on-error,
+  'error-container': $dark-error-container,
+  'on-error-container': $dark-on-error-container,
+
+  // Surface
+  'surface-dim': $dark-surface-dim,
+  'surface': $dark-surface,
+  'surface-bright': $dark-surface-bright,
+  'surface-variant': $dark-surface-variant,
+  'surface-container-lowest': $dark-surface-container-lowest,
+  'surface-container-low': $dark-surface-container-low,
+  'surface-container': $dark-surface-container,
+  'surface-container-high': $dark-surface-container-high,
+  'surface-container-highest': $dark-surface-container-highest,
+  'on-surface': $dark-on-surface,
+  'on-surface-variant': $dark-on-surface-variant,
+  'inverse-surface': $dark-inverse-surface,
+  'inverse-on-surface': $dark-inverse-on-surface,
+  'outline': $dark-outline,
+  'outline-variant': $dark-outline-variant,
+  'scrim': $dark-scrim,
+  'shadow': $dark-shadow,
+
+  // Additional
+  'link': $dark-link,
+  'on-link': $dark-on-link,
+  'link-container': $dark-link-container,
+  'on-link-container': $dark-on-link-container,
+  'warning': $dark-warning,
+  'on-warning': $dark-on-warning,
+  'warning-container': $dark-warning-container,
+  'on-warning-container': $dark-on-warning-container,
+  'success': $dark-success,
+  'on-success': $dark-on-success,
+  'success-container': $dark-success-container,
+  'on-success-container': $dark-on-success-container
+);

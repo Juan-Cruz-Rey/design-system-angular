@@ -1,0 +1,69 @@
+@use '@angular/material' as mat;
+@use './color-tokens' as tokens;
+@use 'sass:map';
+
+@mixin apply-light-overrides {
+  @include mat.theme-overrides(
+    (
+      // ------------------------------------------------------------------------
+      // PRIMARY TOKENS
+      // ------------------------------------------------------------------------
+      primary: tokens.$light-primary,
+      on-primary: tokens.$light-on-primary,
+      primary-container: tokens.$light-primary-container,
+      on-primary-container: tokens.$light-on-primary-container,
+      primary-fixed: tokens.$light-primary-fixed,
+      primary-fixed-dim: tokens.$light-primary-fixed-dim,
+      on-primary-fixed: tokens.$light-on-primary-fixed,
+      on-primary-fixed-variant: tokens.$light-on-primary-fixed-variant,
+      inverse-primary: tokens.$light-inverse-primary,
+      // ------------------------------------------------------------------------
+      // SECONDARY TOKENS
+      // ------------------------------------------------------------------------
+      secondary: tokens.$light-secondary,
+      on-secondary: tokens.$light-on-secondary,
+      secondary-container: tokens.$light-secondary-container,
+      on-secondary-container: tokens.$light-on-secondary-container,
+      secondary-fixed: tokens.$light-secondary-fixed,
+      secondary-fixed-dim: tokens.$light-secondary-fixed-dim,
+      on-secondary-fixed: tokens.$light-on-secondary-fixed,
+      on-secondary-fixed-variant: tokens.$light-on-secondary-fixed-variant,
+      // ------------------------------------------------------------------------
+      // TERTIARY TOKENS
+      // ------------------------------------------------------------------------
+      tertiary: tokens.$light-tertiary,
+      on-tertiary: tokens.$light-on-tertiary,
+      tertiary-container: tokens.$light-tertiary-container,
+      on-tertiary-container: tokens.$light-on-tertiary-container,
+      tertiary-fixed: tokens.$light-tertiary-fixed,
+      tertiary-fixed-dim: tokens.$light-tertiary-fixed-dim,
+      on-tertiary-fixed: tokens.$light-on-tertiary-fixed,
+      on-tertiary-fixed-variant: tokens.$light-on-tertiary-fixed-variant,
+      // ------------------------------------------------------------------------
+      // ERROR TOKENS
+      // ------------------------------------------------------------------------
+      error: tokens.$light-error,
+      on-error: tokens.$light-on-error,
+      error-container: tokens.$light-error-container,
+      on-error-container: tokens.$light-on-error-container,
+      // ------------------------------------------------------------------------
+      // SURFACE & BACKGROUND TOKENS
+      // ------------------------------------------------------------------------
+      surface-dim: tokens.$light-surface-dim,
+      surface: tokens.$light-surface,
+      surface-bright: tokens.$light-surface-bright,
+      surface-variant: tokens.$light-surface-variant,
+      surface-container-lowest: tokens.$light-surface-container-lowest,
+      surface-container-low: tokens.$light-surface-container-low,
+      surface-container: tokens.$light-surface-container,
+      surface-container-high: tokens.$light-surface-container-high,
+      surface-container-highest: tokens.$light-surface-container-highest,
+      on-surface: tokens.$light-on-surface,
+      on-surface-variant: tokens.$light-on-surface-variant,
+      inverse-surface: tokens.$light-inverse-surface,
+      inverse-on-surface: tokens.$light-inverse-on-surface,
+      outline: tokens.$light-outline,
+      outline-variant: tokens.$light-outline-variant
+    )
+  );
+}

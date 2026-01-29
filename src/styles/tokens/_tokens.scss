@@ -1,0 +1,14 @@
+@forward './color-tokens';
+@forward './light-theme-overrides';
+@forward './dark-theme-overrides';
+
+@use './light-theme-overrides' as light;
+@use './dark-theme-overrides' as dark;
+
+@mixin light-overrides {
+  @include light.apply-light-overrides;
+}
+
+@mixin dark-overrides {
+  @include dark.apply-dark-overrides;
+}

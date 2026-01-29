@@ -1,18 +1,24 @@
-// Custom Theming for Angular Material
+// ============================================================================
+// COTO Design System - Material 3 Theme
+// ============================================================================
+
 @use '@angular/material' as mat;
+@use './styles/tokens/tokens' as tokens;
 
 // Include the common styles for Angular Material
 @include mat.core();
 
-// Define the theme
-$design-system-theme: mat.define-theme();
+$light-theme: mat.define-theme();
 
-// Apply the theme to all Angular Material components
 html {
-  @include mat.all-component-themes($design-system-theme);
+  @include mat.all-component-themes($light-theme);
+  @include tokens.light-overrides;
+  @include mat.typography-hierarchy($light-theme);
 }
 
-// Set typography
-html {
-  @include mat.typography-hierarchy($design-system-theme);
+html.dark-theme {
+  $dark-theme: mat.define-theme();
+  @include mat.all-component-themes($dark-theme);
+  @include tokens.dark-overrides;
+  @include mat.typography-hierarchy($dark-theme);
 }

@@ -1,0 +1,69 @@
+@use '@angular/material' as mat;
+@use './color-tokens' as tokens;
+@use 'sass:map';
+
+@mixin apply-dark-overrides {
+  @include mat.theme-overrides(
+    (
+      // ------------------------------------------------------------------------
+      // PRIMARY TOKENS
+      // ------------------------------------------------------------------------
+      primary: tokens.$dark-primary,
+      on-primary: tokens.$dark-on-primary,
+      primary-container: tokens.$dark-primary-container,
+      on-primary-container: tokens.$dark-on-primary-container,
+      primary-fixed: tokens.$dark-primary-fixed,
+      primary-fixed-dim: tokens.$dark-primary-fixed-dim,
+      on-primary-fixed: tokens.$dark-on-primary-fixed,
+      on-primary-fixed-variant: tokens.$dark-on-primary-fixed-variant,
+      inverse-primary: tokens.$dark-inverse-primary,
+      // ------------------------------------------------------------------------
+      // SECONDARY TOKENS
+      // ------------------------------------------------------------------------
+      secondary: tokens.$dark-secondary,
+      on-secondary: tokens.$dark-on-secondary,
+      secondary-container: tokens.$dark-secondary-container,
+      on-secondary-container: tokens.$dark-on-secondary-container,
+      secondary-fixed: tokens.$dark-secondary-fixed,
+      secondary-fixed-dim: tokens.$dark-secondary-fixed-dim,
+      on-secondary-fixed: tokens.$dark-on-secondary-fixed,
+      on-secondary-fixed-variant: tokens.$dark-on-secondary-fixed-variant,
+      // ------------------------------------------------------------------------
+      // TERTIARY TOKENS
+      // ------------------------------------------------------------------------
+      tertiary: tokens.$dark-tertiary,
+      on-tertiary: tokens.$dark-on-tertiary,
+      tertiary-container: tokens.$dark-tertiary-container,
+      on-tertiary-container: tokens.$dark-on-tertiary-container,
+      tertiary-fixed: tokens.$dark-tertiary-fixed,
+      tertiary-fixed-dim: tokens.$dark-tertiary-fixed-dim,
+      on-tertiary-fixed: tokens.$dark-on-tertiary-fixed,
+      on-tertiary-fixed-variant: tokens.$dark-on-tertiary-fixed-variant,
+      // ------------------------------------------------------------------------
+      // ERROR TOKENS
+      // ------------------------------------------------------------------------
+      error: tokens.$dark-error,
+      on-error: tokens.$dark-on-error,
+      error-container: tokens.$dark-error-container,
+      on-error-container: tokens.$dark-on-error-container,
+      // ------------------------------------------------------------------------
+      // SURFACE & BACKGROUND TOKENS
+      // ------------------------------------------------------------------------
+      surface-dim: tokens.$dark-surface-dim,
+      surface: tokens.$dark-surface,
+      surface-bright: tokens.$dark-surface-bright,
+      surface-variant: tokens.$dark-surface-variant,
+      surface-container-lowest: tokens.$dark-surface-container-lowest,
+      surface-container-low: tokens.$dark-surface-container-low,
+      surface-container: tokens.$dark-surface-container,
+      surface-container-high: tokens.$dark-surface-container-high,
+      surface-container-highest: tokens.$dark-surface-container-highest,
+      on-surface: tokens.$dark-on-surface,
+      on-surface-variant: tokens.$dark-on-surface-variant,
+      inverse-surface: tokens.$dark-inverse-surface,
+      inverse-on-surface: tokens.$dark-inverse-on-surface,
+      outline: tokens.$dark-outline,
+      outline-variant: tokens.$dark-outline-variant
+    )
+  );
+}
