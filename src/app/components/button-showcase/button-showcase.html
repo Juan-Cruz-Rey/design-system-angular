@@ -1,0 +1,321 @@
+<div class="showcase-container">
+  <div class="header-controls">
+    <h1>Button Showcase</h1>
+    <div class="theme-toggle">
+      <span class="theme-label">Light</span>
+      <mat-slide-toggle
+        [checked]="isDarkMode()"
+        (change)="toggleTheme()"
+        color="primary">
+      </mat-slide-toggle>
+      <span class="theme-label">Dark</span>
+    </div>
+  </div>
+
+  <section class="button-section">
+    <div class="button-grid">
+      <!-- Headers -->
+      <div class="header"></div>
+      <div class="header">
+        <h3>Text Button</h3>
+        <p>Acciones de baja énfasis, como cancelar o enlaces secundarios.</p>
+      </div>
+      <div class="header">
+        <h3>Elevated Button</h3>
+        <p>Acciones principales en interfaces planas o cuando se necesita destacar.</p>
+      </div>
+      <div class="header">
+        <h3>Outlined Button</h3>
+        <p>Acciones secundarias con énfasis moderado.</p>
+      </div>
+      <div class="header">
+        <h3>Filled Button</h3>
+        <p>Acciones principales con alto contraste.</p>
+      </div>
+      <div class="header">
+        <h3>Tonal Button</h3>
+        <p>Acciones secundarias con buena visibilidad.</p>
+      </div>
+
+      <!-- Default State -->
+      <div class="state-label">Default</div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.text">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.elevated">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.outlined">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.filled">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.tonal">Button</app-button>
+      </div>
+
+      <!-- Hover State -->
+      <div class="state-label">Hover</div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.text" [customClasses]="'isHover'">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.elevated" [customClasses]="'isHover'">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.outlined" [customClasses]="'isHover'">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.filled" [customClasses]="'isHover'">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.tonal" [customClasses]="'isHover'">Button</app-button>
+      </div>
+
+      <!-- Disabled State -->
+      <div class="state-label">Disabled</div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.text" [disabled]="true">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.elevated" [disabled]="true">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.outlined" [disabled]="true">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.filled" [disabled]="true">Button</app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.tonal" [disabled]="true">Button</app-button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buttons with Icons - Icon Left -->
+  <section class="button-section">
+    <h2>Buttons with Icon Left</h2>
+    <div class="button-grid">
+      <!-- Headers -->
+      <div class="header"></div>
+      <div class="header"><h3>Text Button - Icon Left</h3></div>
+      <div class="header"><h3>Elevated Button - Icon Left</h3></div>
+      <div class="header"><h3>Outlined Button - Icon Left</h3></div>
+      <div class="header"><h3>Filled Button - Icon Left</h3></div>
+      <div class="header"><h3>Tonal Button - Icon Left</h3></div>
+
+      <!-- Default State -->
+      <div class="state-label">Default</div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.text">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.elevated">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.outlined">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.filled">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.tonal">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+
+      <!-- Hover State -->
+      <div class="state-label">Hover</div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.text" [customClasses]="'isHover'">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.elevated" [customClasses]="'isHover'">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.outlined" [customClasses]="'isHover'">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.filled" [customClasses]="'isHover'">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.tonal" [customClasses]="'isHover'">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+
+      <!-- Disabled State -->
+      <div class="state-label">Disabled</div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.text" [disabled]="true">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.elevated" [disabled]="true">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.outlined" [disabled]="true">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.filled" [disabled]="true">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.tonal" [disabled]="true">
+          <span class="icon-left icon-dots"></span>
+          Button
+        </app-button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buttons with Icons - Icon Right -->
+  <section class="button-section">
+    <h2>Buttons with Icon Right</h2>
+    <div class="button-grid">
+      <!-- Headers -->
+      <div class="header"></div>
+      <div class="header"><h3>Text Button - Icon Right</h3></div>
+      <div class="header"><h3>Elevated Button - Icon Right</h3></div>
+      <div class="header"><h3>Outlined Button - Icon Right</h3></div>
+      <div class="header"><h3>Filled Button - Icon Right</h3></div>
+      <div class="header"><h3>Tonal Button - Icon Right</h3></div>
+
+      <!-- Default State -->
+      <div class="state-label">Default</div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.text">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.elevated">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.outlined">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.filled">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.tonal">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+
+      <!-- Hover State -->
+      <div class="state-label">Hover</div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.text" [customClasses]="'isHover'">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.elevated" [customClasses]="'isHover'">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.outlined" [customClasses]="'isHover'">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.filled" [customClasses]="'isHover'">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.tonal" [customClasses]="'isHover'">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+
+      <!-- Disabled State -->
+      <div class="state-label">Disabled</div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.text" [disabled]="true">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.elevated" [disabled]="true">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.outlined" [disabled]="true">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.filled" [disabled]="true">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+      <div class="button-cell">
+        <app-button [typeUI]="buttonTypeUI.tonal" [disabled]="true">
+          Button
+          <span class="icon-right icon-dots"></span>
+        </app-button>
+      </div>
+    </div>
+  </section>
+</div>

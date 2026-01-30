@@ -1,0 +1,143 @@
+.showcase-container {
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  .header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      margin: 0;
+      color: var(--mat-sys-on-surface);
+    }
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .theme-label {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--mat-sys-on-surface-variant);
+      }
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    margin-top: 48px;
+    color: var(--mat-sys-on-surface);
+  }
+}
+
+.button-section {
+  margin-bottom: 48px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: 100px repeat(5, 1fr);
+  gap: 16px;
+  align-items: center;
+
+  .header {
+    padding: 16px;
+    background-color: var(--mat-sys-surface-container-low);
+    border-radius: 8px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      color: var(--mat-sys-on-surface);
+    }
+
+    p {
+      font-size: 12px;
+      margin: 0;
+      color: var(--mat-sys-on-surface-variant);
+      line-height: 1.4;
+    }
+  }
+
+  .state-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--mat-sys-on-surface-variant);
+    text-align: right;
+    padding-right: 8px;
+  }
+
+  .button-cell {
+    padding: 16px;
+    background-color: var(--mat-sys-surface-container-lowest);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+  }
+}
+
+.icon-dots {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  background-color: currentColor;
+  -webkit-mask: url('/assets/vector.svg') no-repeat center / contain;
+  mask: url('/assets/vector.svg') no-repeat center / contain;
+}
+
+.icon-left {
+  margin-right: 8px;
+}
+
+.icon-right {
+  margin-left: 8px;
+}
+
+// Responsive design
+@media (max-width: 1200px) {
+  .button-grid {
+    grid-template-columns: 80px repeat(3, 1fr);
+
+    .header:nth-child(n+5) {
+      display: none;
+    }
+
+    .button-cell:nth-child(6n),
+    .button-cell:nth-child(6n-1) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: 80px repeat(2, 1fr);
+
+    .header:nth-child(n+4) {
+      display: none;
+    }
+
+    .button-cell:nth-child(6n),
+    .button-cell:nth-child(6n-1),
+    .button-cell:nth-child(6n-2) {
+      display: none;
+    }
+  }
+}

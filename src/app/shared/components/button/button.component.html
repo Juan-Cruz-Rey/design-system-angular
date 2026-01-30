@@ -1,0 +1,61 @@
+@switch (matDirective) {
+  @case ('mat-icon-button') {
+    <button
+      [type]="type()"
+      [disabled]="disabled() || loading()"
+      mat-icon-button
+      (click)="onClick()"
+      [class]="cssClass + ' ' + customClasses()">
+      <ng-container *ngTemplateOutlet="buttonContent" />
+    </button>
+  }
+  @case ('mat-raised-button') {
+    <button
+      [type]="type()"
+      [disabled]="disabled() || loading()"
+      mat-raised-button
+      (click)="onClick()"
+      [class]="cssClass + ' ' + customClasses()">
+      <ng-container *ngTemplateOutlet="buttonContent" />
+    </button>
+  }
+  @case ('mat-stroked-button') {
+    <button
+      [type]="type()"
+      [disabled]="disabled() || loading()"
+      mat-stroked-button
+      (click)="onClick()"
+      [class]="cssClass + ' ' + customClasses()">
+      <ng-container *ngTemplateOutlet="buttonContent" />
+    </button>
+  }
+  @case ('mat-button') {
+    <button
+      [type]="type()"
+      [disabled]="disabled() || loading()"
+      mat-button
+      (click)="onClick()"
+      [class]="cssClass + ' ' + customClasses()">
+      <ng-container *ngTemplateOutlet="buttonContent" />
+    </button>
+  }
+  @default {
+    <button
+      [type]="type()"
+      [disabled]="disabled() || loading()"
+      mat-flat-button
+      (click)="onClick()"
+      [class]="cssClass + ' ' + customClasses()">
+      <ng-container *ngTemplateOutlet="buttonContent" />
+    </button>
+  }
+}
+
+<ng-template #buttonContent>
+  @if (loading()) {
+    <mat-spinner class="loading-center" diameter="20" />
+  }
+  <span class="content-label" [class.invisible]="loading()">
+    <ng-content />
+  </span>
+</ng-template>

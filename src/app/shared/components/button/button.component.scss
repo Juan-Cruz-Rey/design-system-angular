@@ -1,0 +1,75 @@
+@use '@angular/material' as mat;
+
+// ============================================================================
+// GLOBAL BUTTON OVERRIDES
+// ============================================================================
+
+@include mat.button-overrides(
+  (
+    filled-container-shape: 8px,
+    outlined-container-shape: 8px,
+    text-container-shape: 8px,
+    protected-container-shape: 8px,
+    tonal-container-shape: 8px,
+  )
+);
+
+// ============================================================================
+// BUTTON LAYOUT & LOADING STATE
+// ============================================================================
+
+.mdc-button .mdc-button__label,
+.mat-mdc-button .mdc-button__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  .content-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  mat-spinner.loading-center {
+    position: absolute;
+    right: calc(50% - 10px);
+  }
+}
+
+// ============================================================================
+// HOVER STATE CLASS - For showcase visualization
+// ============================================================================
+
+button.isHover {
+  &.text,
+  &.tertiary {
+    background-color: rgba(var(--mat-sys-primary-rgb, 196, 17, 19), 0.08) !important;
+  }
+
+  &.elevated {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+                0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+    background-color: rgba(var(--mat-sys-primary-rgb, 196, 17, 19), 0.08) !important;
+  }
+
+  &.outlined,
+  &.secondary {
+    background-color: rgba(var(--mat-sys-primary-rgb, 196, 17, 19), 0.08) !important;
+  }
+
+  &.filled,
+  &.primary {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+                0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+    filter: brightness(0.95);
+  }
+
+  &.mat-tonal-button {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+                0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+    filter: brightness(0.95);
+  }
+}

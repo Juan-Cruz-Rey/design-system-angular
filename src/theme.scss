@@ -1,24 +1,44 @@
 // ============================================================================
 // COTO Design System - Material 3 Theme
 // ============================================================================
+// Usa paletas predefinidas de Material y sobrescribe con tokens del design system
+// ============================================================================
 
 @use '@angular/material' as mat;
-@use './styles/tokens/tokens' as tokens;
+@use './styles/tokens/tokens';
 
-// Include the common styles for Angular Material
 @include mat.core();
 
-$light-theme: mat.define-theme();
+// ============================================================================
+// LIGHT THEME
+// ============================================================================
 
 html {
-  @include mat.all-component-themes($light-theme);
+  @include mat.theme((
+    color: (
+      theme-type: light,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+
+  // Sobrescribir con los colores exactos del design system
   @include tokens.light-overrides;
-  @include mat.typography-hierarchy($light-theme);
 }
 
+// ============================================================================
+// DARK THEME
+// ============================================================================
+
 html.dark-theme {
-  $dark-theme: mat.define-theme();
-  @include mat.all-component-themes($dark-theme);
+  @include mat.theme((
+    color: (
+      theme-type: dark,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+
+  // Sobrescribir con los colores exactos del design system
   @include tokens.dark-overrides;
-  @include mat.typography-hierarchy($dark-theme);
 }
